@@ -10,16 +10,18 @@ import java.util.Scanner;
 public class ex17_2 {
     public static void main(String[] args) {
         int[] a = {1, 12, 4, 6, 18, 7, 15, 10, 3, 20};
-        for (int i = 0; i < 9; i++) {
-            System.out.println("Введите любое целое число от 1 до 20");
-            Scanner b = new Scanner(System.in);
-            int x = b.nextInt();
-            if (x != a[i]) {
-                System.out.println("Такого числа в массиве нет");
-                System.out.println("Попробуйте еще раз");
-            } if (x == a[i]){
-                System.out.println("Вы угодали, возьмите с полки пирожок");
+        boolean c = false;
+        System.out.println("Введите любое целое число от 1 до 20");
+        Scanner b = new Scanner(System.in);
+        int x = b.nextInt();
+        for (int y : a) {
+            if (y == x) {
+                c = true;
+                break;
             }
-            }
+        }
+       /* System.out.println(c);*/
+        if (c != true){System.out.println("Такого числа в массиве нет");}
+        else {System.out.println("Вы угодали, возьмите с полки пирожок");}
     }
 }
