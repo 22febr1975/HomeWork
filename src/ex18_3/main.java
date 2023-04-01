@@ -12,8 +12,8 @@ public class main {
                     int digit = t % 10;
                     reversed = reversed * 10 + digit;
                 String b = Integer.toString(digit);
-                              System.out.println(b);}
-                                System.out.println("Реверс числа: " + reversed);
+                              System.out.print(b+b +" ");}
+                   System.out.println("Реверс числа: " + reversed);
             }
         }
 
